@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "@/assets/jpgImages/logo1.png";
 import Link from "next/link";
+import Social from "./Social";
 
 const LandingPage = () => {
   return (
@@ -28,16 +29,23 @@ const LandingPage = () => {
             de nuestro whatsapp.
           </p>
         </div>
-        <div className="landing-btn">
-          <Link
-            target="_blank"
-            href={
-              "https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
-            }
-          >
-            contactar
-          </Link>
-        </div>
+        {/* <div className="landing-btn"> */}
+        <Link
+          className="landing-btn"
+          target="_blank"
+          href={
+            "https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
+          }
+        >
+          CONTACTAR
+        </Link>
+        {/* </div> */}
+        <footer>
+          <Social />
+          <div className="footer-text">
+            <span>© LO design | 2024 | Todos los derechos reservados</span>
+          </div>
+        </footer>
       </div>
     </>
   );
