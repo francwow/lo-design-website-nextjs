@@ -18,7 +18,15 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  --color-green: rgb(96, 173, 41);
+  --color-orange: rgb(233, 107, 0);
+  --color-gray: rgb(77, 84, 82);
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(0, 0, 0);
   --font-body: var(--font-inter);
+  --font-title: var(--font-montserrat);
+  --font-cta: var(--font-oswald);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
 }
 
 i.symbol {
@@ -74,7 +82,7 @@ i.symbol {
   align-items: center;
   gap: 30px;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
-  background-image: url("../assets/jpgImages/landing.jpg");
+  background-image: url("../assets/webpImages/landing.webp");
   background-size: cover;
   background-position: center;
   background-color: white;

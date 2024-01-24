@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/assets/jpgImages/logo1.png";
+import logo from "@/assets/webpImages/logo1.webp";
 import Link from "next/link";
 import Social from "./Social";
 

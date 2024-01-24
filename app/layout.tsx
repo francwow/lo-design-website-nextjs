@@ -1,11 +1,19 @@
 import Provider from "@/components/Provider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@/styles/normalize.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+});
 
 const materialSymbols = localFont({
   variable: "--font-family-symbols", // Variable name (to reference after in CSS/styles)
@@ -29,7 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Provider>
-        <body className={inter.variable}>{children}</body>
+        <body
+          className={`${inter.variable} ${montserrat.variable} ${oswald.variable}`}
+        >
+          {children}
+        </body>
       </Provider>
     </html>
   );
