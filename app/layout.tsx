@@ -4,6 +4,9 @@ import { Inter, Montserrat, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@/styles/normalize.css";
+import Languages from "@/components/Languages";
+import MainNav from "@/components/MainNav";
+import MenuBtn from "@/components/MenuBtn";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({
@@ -35,11 +38,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className={`${materialSymbols.variable}`} lang="es">
       <Provider>
         <body
           className={`${inter.variable} ${montserrat.variable} ${oswald.variable}`}
         >
+          <MenuBtn />
+          <MainNav />
           {children}
         </body>
       </Provider>
