@@ -8,24 +8,32 @@
 }
 
 html {
-  overflow-x: none;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar {
+  width: 16px;
 }
 
-html::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   border-radius: 0;
-  background-color: #e7e7e7;
-  border: 1px solid #cacaca;
+  background-color: rgba(8, 8, 8, 0.9);
 }
 
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   height: 50px;
-  background-color: #6a6a6a;
+  background-color: #e7e7e7;
+  border-radius: 8px;
+  border: 3px solid rgba(8, 8, 8, 0.9);
+}
+
+@supports (scrollbar-color: rgba(8, 8, 8, 0.9) #e7e7e7) {
+  * {
+    scrollbar-color: #e7e7e7 rgba(8, 8, 8, 0.9);
+    scrollbar-width: thin;
+  }
 }
 
 body {
@@ -62,6 +70,11 @@ i.symbol {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-feature-settings: "liga";
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .main-wrapper {
@@ -187,26 +200,48 @@ i.symbol {
   background-color: #e0e0e0;
 }
 
+/* <Header /> */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(8, 8, 8, 0.9);
+  z-index: 999;
+}
+
+.logo-container {
+  width: 200px;
+}
+
 /* <MainNav /> */
 .nav-overlay {
   position: fixed;
   inset: 0;
-  background-color: transparent;
+  background-color: var(--color-gray);
+  opacity: 0.1;
+  filter: blur(10px);
+  z-index: 999;
 }
 
 .menu-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
   font-family: var(--font-body);
   font-weight: 600;
   padding: 10px;
   display: inline-block;
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: rgba(8, 8, 8, 1);
+  z-index: 999;
 }
 
 .esc-btn {
+  z-index: 999;
 }
 
 .esc-btn i {
@@ -228,8 +263,9 @@ i.symbol {
   height: 100%;
   opacity: 0;
   transform: translate3d(110%, 0, 0);
-  background-color: rgba(8, 8, 8, 0.8);
+  background-color: rgba(8, 8, 8, 1);
   transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .nav-active {
@@ -312,7 +348,7 @@ i.symbol {
   align-items: center;
   gap: 30px;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
-  background-image: url("../assets/webpImages/landing.webp");
+  background-image: url("/webpImages/landing.webp");
   background-size: cover;
   background-position: center;
   background-color: white;
@@ -403,16 +439,109 @@ i.symbol {
 }
 
 .home-intro-container {
+  position: relative;
   width: 100%;
-  height: 400vh;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.slider-item {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.025s ease, opacity 0.5s ease;
+}
+
+.slider-item img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.slider-buttons {
+  z-index: 99;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-buttons button:first-child {
+  transform: rotate(180deg);
+}
+
+.slider-buttons button .symbol {
+  background-color: #9090905a;
+}
+
+.slider-buttons button:hover .symbol {
+  background-color: #6161615a;
+}
+
+.slider-buttons .symbol {
+  color: white;
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+/* <Footer /> */
+.footer {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: rgba(8, 8, 8, 1);
+  padding: 0.5rem;
+}
+
+.footer-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-nav .nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+}
+
+.footer-nav .nav-item {
+  font-size: 0.8rem;
+}
+
+.footer .footer-text {
+  color: white;
+  font-size: 0.8rem;
 }
 
 /* Media Queries */
 @media screen and (min-width: 991px) {
+  /* <Header /> */
+  .header {
+    padding: 20px;
+  }
+
+  .logo-container {
+    width: 300px;
+  }
+
   /* <MainNav /> */
   .main-nav {
     width: 480px;
-    background-color: rgba(8, 8, 8, 0.9);
+    background-color: rgba(8, 8, 8, 1);
   }
 
   .nav-item {
@@ -431,5 +560,10 @@ i.symbol {
 
   .landing-btn {
     font-size: 1.3rem;
+  }
+
+  /* <Home /> */
+  .slider-buttons .symbol {
+    font-size: 3rem;
   }
 }

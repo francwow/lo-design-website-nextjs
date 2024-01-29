@@ -8,6 +8,8 @@ import Languages from "@/components/Languages";
 import MainNav from "@/components/MainNav";
 import MenuBtn from "@/components/MenuBtn";
 import NavOverlay from "@/components/NavOverlay";
+import Header from "@/components/Header";
+import FooterComponent from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({
@@ -45,9 +47,10 @@ export default function RootLayout({
           className={`${inter.variable} ${montserrat.variable} ${oswald.variable}`}
         >
           <NavOverlay />
-          <MenuBtn />
+          <Header />
           <MainNav />
           <div className="main-wrapper">{children}</div>
+          <FooterComponent />
         </body>
       </Provider>
     </html>
