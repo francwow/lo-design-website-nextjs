@@ -19,7 +19,7 @@ const Languages = () => {
         menuActive ? "language-container fade-in-right" : "language-container"
       }
     >
-      <div className="btn-container">
+      <div className="language-btn-container">
         <button
           onClick={() => {
             setOpenLanguage(!openLanguage);

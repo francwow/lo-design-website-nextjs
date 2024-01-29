@@ -28,16 +28,6 @@ const MainNav = () => {
 
   return (
     <nav className={menuActive ? "main-nav nav-active" : "main-nav"}>
-      <div className="esc-btn">
-        <button
-          onClick={() => {
-            setMenuActive(false);
-            setOpenLanguage(false);
-          }}
-        >
-          <Icon icon="close" />
-        </button>
-      </div>
       <div
         ref={navRef}
         className={
@@ -46,6 +36,19 @@ const MainNav = () => {
             : "nav-items-container"
         }
       >
+        <div className="nav-secondary-items">
+          <Languages />
+          <div className="esc-btn">
+            <button
+              onClick={() => {
+                setMenuActive(false);
+                setOpenLanguage(false);
+              }}
+            >
+              <Icon icon="close" />
+            </button>
+          </div>
+        </div>
         {language === "ES" ? (
           <ul className="nav-items">
             <Link href={"/"} onClick={() => setMenuActive(false)}>
@@ -95,7 +98,6 @@ const MainNav = () => {
           <Social />
         </div>
       </div>
-      <Languages />
     </nav>
   );
 };
