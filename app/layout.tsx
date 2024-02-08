@@ -10,6 +10,7 @@ import MenuBtn from "@/components/MenuBtn";
 import NavOverlay from "@/components/NavOverlay";
 import Header from "@/components/Header";
 import FooterComponent from "@/components/Footer";
+import Whatsapp from "@/components/Whatsapp";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({
@@ -46,10 +47,11 @@ export default function RootLayout({
         <body
           className={`${inter.variable} ${montserrat.variable} ${oswald.variable}`}
         >
+          <Whatsapp />
           <NavOverlay />
           <Header />
           <MainNav />
-          <div className="main-wrapper">{children}</div>
+          <main className="main-wrapper">{children}</main>
           <FooterComponent />
         </body>
       </Provider>

@@ -17,16 +17,24 @@ const NavItems = () => {
         <li className="nav-item">Conócenos</li>
       </Link>
 
-      <Link href={"soluciones"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Soluciones</li>
+      <Link href={"productosyservicios"} onClick={() => setMenuActive(false)}>
+        <li className="nav-item">Productos y Servicios</li>
       </Link>
 
-      <Link href={"especiales"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Proyectos Especiales</li>
+      <Link href={"proyectos"} onClick={() => setMenuActive(false)}>
+        <li className="nav-item">Proyectos</li>
       </Link>
 
       <Link href={"contacto"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Contacto</li>
+        <li className="nav-item">Contáctanos</li>
+      </Link>
+
+      <Link href={"#"} className="footer-link">
+        <li className="nav-item">Términos y Condiciones</li>
+      </Link>
+
+      <Link href={"#"} className="footer-link">
+        <li className="nav-item">Política de Privacidad</li>
       </Link>
     </ul>
   ) : (
@@ -36,19 +44,27 @@ const NavItems = () => {
       </Link>
 
       <Link href={"nosotros"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Meet the team</li>
+        <li className="nav-item">Meet the Team</li>
       </Link>
 
-      <Link href={"soluciones"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Services</li>
+      <Link href={"productosyservicios"} onClick={() => setMenuActive(false)}>
+        <li className="nav-item">Product and Services</li>
       </Link>
 
-      <Link href={"especiales"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Special Projects</li>
+      <Link href={"proyectos"} onClick={() => setMenuActive(false)}>
+        <li className="nav-item">Projects</li>
       </Link>
 
       <Link href={"contacto"} onClick={() => setMenuActive(false)}>
-        <li className="nav-item">Contact</li>
+        <li className="nav-item">Contact Us</li>
+      </Link>
+
+      <Link href={"#"} className="footer-link">
+        <li className="nav-item">Terms of Use</li>
+      </Link>
+
+      <Link href={"#"} className="footer-link">
+        <li className="nav-item">Privacy</li>
       </Link>
     </ul>
   );

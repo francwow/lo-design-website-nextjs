@@ -6,7 +6,9 @@ import img3 from "@/public/intro-3.webp";
 import img4 from "@/public/intro-4.webp";
 import Image from "next/image";
 import Icon from "./GoogleIcon";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import CTA from "./CTA";
+import { useInView } from "react-intersection-observer";
 
 const images = [
   { id: 0, src: img1 },
@@ -17,9 +19,45 @@ const images = [
 
 const Slider = () => {
   const [index, setIndex] = useState<number>(0);
+  const { ref: containerRef, inView: containerInView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
+  const [sliderIndex, setSliderIndex] = useState<number>(0);
+
+  // useEffect(() => {
+  //   const increaseSliderIndex = () => {
+  //     if (sliderIndex < 2) {
+  //       setSliderIndex(sliderIndex + 1)
+  //     } else if (sliderIndex >= 2) {
+  //       setSliderIndex(0);
+  //     }
+  //   }
+
+  // })
 
   return (
     <div className="slider-container">
+      <div
+        ref={containerRef}
+        className={containerInView ? "slider-cta fade-up" : "slider-cta"}
+      >
+        <div
+          style={{ opacity: "0", animationDelay: "0.3s" }}
+          className={containerInView ? "slider-h1 fade-up" : "slider-h1"}
+        >
+          <h1>
+            Brindamos soluciones en vidrio, acero inoxidable y aluminio
+            arquitectónico para la industria y el hogar.
+          </h1>
+        </div>
+        <div
+          style={{ opacity: "0", animationDelay: "0.5s" }}
+          className={containerInView ? "fade-up" : ""}
+        >
+          <CTA copyEN="lets work together" copyES="trabajemos juntos" />
+        </div>
+      </div>
       <div className="slider-buttons">
         <button
           onClick={() => {
@@ -65,6 +103,7 @@ const Slider = () => {
               height={1200}
               priority
             />
+            <div className="slider-overlay"></div>
           </div>
         );
       })}

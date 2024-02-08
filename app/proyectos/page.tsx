@@ -1,6 +1,6 @@
 import Placeholder from "@/components/Placeholder";
 
-const AboutPage = () => {
+const ProjectsPage = () => {
   return (
     <div className="main-content-container">
       <section className="main-content">
@@ -10,4 +10,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default ProjectsPage;
