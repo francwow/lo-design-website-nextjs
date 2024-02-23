@@ -6,7 +6,6 @@ import {
   useMenuActive,
 } from "@/contexts/ContextHooks";
 import Icon from "./GoogleIcon";
-import { useState } from "react";
 
 const Languages = () => {
   const { language, setLanguage } = useLanguage();
@@ -28,7 +27,7 @@ const Languages = () => {
         >
           <Icon icon="language" />
           <div className="language">
-            <span>{language === "ES" ? "Español" : "English"}</span>
+            <span>{language === "ES" ? "Idiomas" : "Languages"}</span>
           </div>
         </button>
       </div>

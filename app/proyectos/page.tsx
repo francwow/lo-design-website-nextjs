@@ -1,10 +1,11 @@
 import Placeholder from "@/components/Placeholder";
+import Projects from "@/components/Projects";
 
 const ProjectsPage = () => {
   return (
     <div className="main-content-container">
       <section className="main-content">
-        <Placeholder bgColor="sand" />
+        <Projects />
       </section>
     </div>
   );

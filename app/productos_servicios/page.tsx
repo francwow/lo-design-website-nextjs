@@ -1,10 +1,10 @@
-import Placeholder from "@/components/Placeholder";
+import Services from "@/components/Services";
 
 const ServicesPage = () => {
   return (
     <div className="main-content-container">
       <section className="main-content">
-        <Placeholder bgColor="sand" />
+        <Services />
       </section>
     </div>
   );

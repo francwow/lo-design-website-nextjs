@@ -21,18 +21,20 @@ const HomeCTA = () => {
     >
       {language === "EN" ? (
         <div className="cta-text">
-          <h2>Our clients receive special discounts.</h2>
+          <h2>WE TURN YOUR NEEDS INTO SOLUTIONS</h2>
           <p>
-            Be one of our clients to receive a <strong>15% discount</strong> on
-            your first purchase.
+            <strong>9 years of experience</strong> and more than{" "}
+            <strong>60 satisfied customers</strong> are proof of our commitment
+            and quality.
           </p>
         </div>
       ) : (
         <div className="cta-text">
-          <h2>Nuestros clientes, obtienen descuentos especiales.</h2>
+          <h2>CONVERTIMOS TUS NECESIDADES EN SOLUCIONES</h2>
           <p>
-            Se uno de nuestros clientes y obtén un{" "}
-            <strong>descuento del 15%</strong> en tu primera compra.
+            <strong>9 años de experiencia</strong> y más de{" "}
+            <strong>60 clientes satisfechos</strong> son prueba de nuestro
+            compromiso y calidad.
           </p>
         </div>
       )}
@@ -44,7 +46,11 @@ const HomeCTA = () => {
           width={800}
           height={600}
         />
-        <CTA copyEN="free consultation" copyES="asesoría gratuita" />
+        <CTA
+          href="https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
+          copyEN="FREE CONSULTATION"
+          copyES="ASESORÍA GRATUITA"
+        />
         <div className="cta-overlay"></div>
       </div>
     </div>

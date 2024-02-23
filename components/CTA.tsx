@@ -7,18 +7,14 @@ import { useLanguage } from "@/contexts/ContextHooks";
 type CTAProps = {
   copyEN: string;
   copyES: string;
+  href: string;
 };
 
-const CTA = ({ copyEN, copyES }: CTAProps) => {
+const CTA = ({ copyEN, copyES, href }: CTAProps) => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <Link
-      target="_blank"
-      href={
-        "https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
-      }
-    >
+    <Link target="_blank" href={href}>
       <div className="cta">
         {language === "EN" ? (
           <span>

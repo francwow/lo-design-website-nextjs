@@ -17,7 +17,7 @@ const NavItems = () => {
         <li className="nav-item">Conócenos</li>
       </Link>
 
-      <Link href={"productosyservicios"} onClick={() => setMenuActive(false)}>
+      <Link href={"productos_servicios"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Productos y Servicios</li>
       </Link>
 

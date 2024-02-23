@@ -1,6 +1,7 @@
 import Provider from "@/components/Provider";
 import type { Metadata } from "next";
 import { Inter, Montserrat, Oswald } from "next/font/google";
+import "normalize.css";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@/styles/normalize.css";
