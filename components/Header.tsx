@@ -4,10 +4,17 @@ import { useScrolled } from "@/contexts/ContextHooks";
 import Logo from "./Logo";
 import MenuBtn from "./MenuBtn";
 import { useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const headerRef = useRef<HTMLDivElement | null>(null);
   const { scrolled, setScrolled } = useScrolled();
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    console.log(pathname);
+  }, [pathname]);
 
   useEffect(() => {
     if (headerRef.current !== undefined) {
@@ -43,9 +50,10 @@ const Header = () => {
 
   return (
     <div
-      style={scrolled ? { transform: "translate3d(0, -100%, 0)" } : {}}
       ref={headerRef}
-      className={"header"}
+      className={`${scrolled ? "header scrolled" : "header"} ${
+        pathname === "/contacto" ? "contact" : ""
+      }`}
     >
       <Logo />
       <MenuBtn />

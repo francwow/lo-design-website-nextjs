@@ -2,12 +2,12 @@
 
 import { useLanguage } from "@/contexts/ContextHooks";
 import { useInView } from "react-intersection-observer";
-import partner1 from "@/public/partner1.webp";
-import partner2 from "@/public/partner2.webp";
-import partner3 from "@/public/partner3.webp";
-import partner4 from "@/public/partner4.webp";
-import partner5 from "@/public/partner5.webp";
-import partner6 from "@/public/partner6.webp";
+import partner1 from "@/public/partners/partner1.webp";
+import partner2 from "@/public/partners/partner2.webp";
+import partner3 from "@/public/partners/partner3.webp";
+import partner4 from "@/public/partners/partner4.webp";
+import partner5 from "@/public/partners/partner5.webp";
+import partner6 from "@/public/partners/partner6.webp";
 import Image from "next/image";
 
 const partnerImages = [
@@ -31,35 +31,71 @@ const Partners = () => {
       {language === "ES" ? (
         <div
           style={{ opacity: "0" }}
-          className={containerInView ? "partners-h2 fade-up" : "partners-h2"}
+          className={
+            containerInView ? "partners-heading fade-up" : "partners-heading"
+          }
         >
           <h2>ELLOS CREYERON EN NOSOTROS</h2>
+          <h3>
+            9 años trabajando para construir los sueños de nuestros aliados
+          </h3>
         </div>
       ) : (
         <div
           style={{ opacity: "0" }}
-          className={containerInView ? "partners-h2 fade-up" : "partners-h2"}
+          className={
+            containerInView ? "partners-heading fade-up" : "partners-heading"
+          }
         >
           <h2>THEY BELIEVED IN US</h2>
+          <h3>9 years working to build the dreams of our allies</h3>
         </div>
       )}
 
-      <ul className="partner-items">
-        {partnerImages.map((partner) => {
-          return (
-            <li
-              style={{ opacity: "0", animationDelay: `${partner.id / 5}s` }}
-              key={partner.id}
-              className={
-                containerInView ? "partner-item fade-up" : "partner-item"
-              }
-            >
-              <div className="partner-item-overlay"></div>
-              <Image src={partner.src} alt="partner" width={500} height={500} />
-            </li>
-          );
-        })}
-      </ul>
+      <div className="partner-items-container">
+        <ul className="partner-items">
+          {partnerImages.map((partner) => {
+            return (
+              <li
+                // style={{ opacity: "0", animationDelay: `${partner.id / 5}s` }}
+                key={partner.id}
+                className={
+                  containerInView ? "partner-item fade-up" : "partner-item"
+                }
+              >
+                <div className="partner-item-overlay"></div>
+                <Image
+                  src={partner.src}
+                  alt="partner"
+                  width={500}
+                  height={500}
+                />
+              </li>
+            );
+          })}
+        </ul>
+        <ul className="partner-items">
+          {partnerImages.map((partner) => {
+            return (
+              <li
+                // style={{ opacity: "0", animationDelay: `${partner.id / 5}s` }}
+                key={partner.id}
+                className={
+                  containerInView ? "partner-item fade-up" : "partner-item"
+                }
+              >
+                <div className="partner-item-overlay"></div>
+                <Image
+                  src={partner.src}
+                  alt="partner"
+                  width={500}
+                  height={500}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

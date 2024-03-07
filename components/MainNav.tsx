@@ -33,7 +33,7 @@ const MainNav = () => {
       >
         <div className="nav-secondary-items">
           <Languages />
-          <div className="esc-btn">
+          <div className={menuActive ? "esc-btn active" : "esc-btn"}>
             <button
               onClick={() => {
                 setMenuActive(false);

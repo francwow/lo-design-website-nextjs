@@ -15,7 +15,7 @@ const projects: Projects[] = [
     descTextEN: "24 PROJECTS",
     headingTextES: "ALUMINIO ARQUITECTONICO",
     headingTextEN: "ARCHITECTURAL ALUMINUM",
-    img: "/1-aluminio-arquitectonico.webp",
+    img: "/projects/1-aluminio-arquitectonico.webp",
     id: 0,
   },
   {
@@ -23,7 +23,7 @@ const projects: Projects[] = [
     descTextEN: "12 PROJECTS",
     headingTextES: "ACERO INOXIDABLE",
     headingTextEN: "STAINLESS STEEL",
-    img: "/2-acero-inoxidable.webp",
+    img: "/projects/2-acero-inoxidable.webp",
     id: 1,
   },
   {
@@ -31,7 +31,7 @@ const projects: Projects[] = [
     descTextEN: "39 PROJECTS",
     headingTextES: "VIDRIOS ESPECIALES",
     headingTextEN: "SPECIAL GLASSES",
-    img: "/3-vidrios-especiales.webp",
+    img: "/projects/3-vidrios-especiales.webp",
     id: 2,
   },
   {
@@ -39,7 +39,7 @@ const projects: Projects[] = [
     descTextEN: "16 PROJECTS",
     headingTextES: "SISTEMAS AUTOMATIZADOS",
     headingTextEN: "AUTOMATED SYSTEMS",
-    img: "/4-sistemas-automatizados.webp",
+    img: "/projects/4-sistemas-automatizados.webp",
     id: 3,
   },
   {
@@ -48,7 +48,7 @@ const projects: Projects[] = [
     headingTextES:
       "CONTROL SOLAR, PELICULAS DE SEGURIDAD Y VINILOS DECORATIVOS",
     headingTextEN: "SOLAR CONTROL, SAFETY FILMS AND DECORATIVE VINYL",
-    img: "/5-control-solar.webp",
+    img: "/projects/5-control-solar.webp",
     id: 4,
   },
   {
@@ -56,7 +56,7 @@ const projects: Projects[] = [
     descTextEN: "5 PROJECTS",
     headingTextES: "PROYECTOS ESPECIALES",
     headingTextEN: "SPECIAL PROJECTS",
-    img: "/6-proyectos-especiales.webp",
+    img: "/projects/6-proyectos-especiales.webp",
     id: 5,
   },
   {
@@ -64,7 +64,7 @@ const projects: Projects[] = [
     descTextEN: "7 PROJECTS",
     headingTextES: "VIDRIO INTELIGENTE",
     headingTextEN: "SMART GLASS",
-    img: "/7-smart-glass.webp",
+    img: "/projects/7-smart-glass.webp",
     id: 6,
   },
   {
@@ -72,7 +72,7 @@ const projects: Projects[] = [
     descTextEN: "21 PROJECTS",
     headingTextES: "OTROS",
     headingTextEN: "OTHER",
-    img: "/8-otros.webp",
+    img: "/projects/8-otros.webp",
     img2: "",
     img3: "",
     id: 7,

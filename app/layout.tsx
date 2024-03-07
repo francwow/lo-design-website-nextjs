@@ -52,8 +52,7 @@ export default function RootLayout({
           <NavOverlay />
           <Header />
           <MainNav />
-          <main className="main-wrapper">{children}</main>
-          <FooterComponent />
+          {children}
         </body>
       </Provider>
     </html>

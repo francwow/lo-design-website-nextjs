@@ -14,14 +14,16 @@ const HomeCTA = () => {
   });
 
   return (
-    <div
-      style={{ opacity: "0" }}
-      ref={containerRef}
-      className={containerInView ? "cta-container fade-up" : "cta-container"}
-    >
+    <div ref={containerRef} className={"cta-container"}>
+      <div className="cta-overlay"></div>
       {language === "EN" ? (
-        <div className="cta-text">
-          <h2>WE TURN YOUR NEEDS INTO SOLUTIONS</h2>
+        <div
+          style={{ opacity: "0" }}
+          className={containerInView ? "cta-text fade-up" : "cta-text"}
+        >
+          <h2>
+            WE TURN YOUR <strong>NEEDS</strong> INTO <strong>SOLUTIONS</strong>
+          </h2>
           <p>
             <strong>9 years of experience</strong> and more than{" "}
             <strong>60 satisfied customers</strong> are proof of our commitment
@@ -29,8 +31,14 @@ const HomeCTA = () => {
           </p>
         </div>
       ) : (
-        <div className="cta-text">
-          <h2>CONVERTIMOS TUS NECESIDADES EN SOLUCIONES</h2>
+        <div
+          style={{ opacity: "0" }}
+          className={containerInView ? "cta-text fade-up" : "cta-text"}
+        >
+          <h2>
+            CONVERTIMOS TUS <strong>NECESIDADES</strong> EN{" "}
+            <strong>SOLUCIONES</strong>
+          </h2>
           <p>
             <strong>9 años de experiencia</strong> y más de{" "}
             <strong>60 clientes satisfechos</strong> son prueba de nuestro
@@ -38,21 +46,11 @@ const HomeCTA = () => {
           </p>
         </div>
       )}
-      <div className="cta-img">
-        <Image
-          priority
-          src={promoImg}
-          alt="Business meeting"
-          width={800}
-          height={600}
-        />
-        <CTA
-          href="https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
-          copyEN="FREE CONSULTATION"
-          copyES="ASESORÍA GRATUITA"
-        />
-        <div className="cta-overlay"></div>
-      </div>
+      <CTA
+        href="https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
+        copyEN="PROFESSIONAL CONSULTATION"
+        copyES="ASESORÍA PROFESIONAL"
+      />
     </div>
   );
 };
