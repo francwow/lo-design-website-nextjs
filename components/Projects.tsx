@@ -1,13 +1,11 @@
-"use client";
-
-import projects from "@/data/projects";
+import { featuredProjects, projects } from "@/data/projects";
 import ProjectsItem from "./ProjectsItem";
 
 const Projects = () => {
   return (
     <div className="projects-container">
       <div className="projects">
-        {projects.map((project) => {
+        {featuredProjects.map((project) => {
           return (
             <ProjectsItem
               descTextES={project.descTextES}

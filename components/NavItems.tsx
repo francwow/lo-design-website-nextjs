@@ -13,19 +13,19 @@ const NavItems = () => {
         <li className="nav-item">Inicio</li>
       </Link>
 
-      <Link href={"nosotros"} onClick={() => setMenuActive(false)}>
+      <Link href={"/nosotros"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Conócenos</li>
       </Link>
 
-      <Link href={"productos_servicios"} onClick={() => setMenuActive(false)}>
+      <Link href={"/productos_servicios"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Productos y Servicios</li>
       </Link>
 
-      <Link href={"proyectos"} onClick={() => setMenuActive(false)}>
+      <Link href={"/proyectos"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Proyectos</li>
       </Link>
 
-      <Link href={"contacto"} onClick={() => setMenuActive(false)}>
+      <Link href={"/contacto"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Contáctanos</li>
       </Link>
 
@@ -43,19 +43,19 @@ const NavItems = () => {
         <li className="nav-item">Home</li>
       </Link>
 
-      <Link href={"nosotros"} onClick={() => setMenuActive(false)}>
+      <Link href={"/nosotros"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Meet the Team</li>
       </Link>
 
-      <Link href={"productosyservicios"} onClick={() => setMenuActive(false)}>
+      <Link href={"/productosyservicios"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Product and Services</li>
       </Link>
 
-      <Link href={"proyectos"} onClick={() => setMenuActive(false)}>
+      <Link href={"/proyectos"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Projects</li>
       </Link>
 
-      <Link href={"contacto"} onClick={() => setMenuActive(false)}>
+      <Link href={"/contacto"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Contact Us</li>
       </Link>
 

@@ -5,6 +5,7 @@ import {
   LanguageContextType,
   LanguageMenuContextType,
   MenuContextType,
+  ProductContextType,
   ScrolledContextType,
 } from "../types/Types";
 
@@ -16,6 +17,8 @@ export const LanguageMenuContext =
   createContext<LanguageMenuContextType | null>(null);
 
 export const ScrolledContext = createContext<ScrolledContextType | null>(null);
+
+export const ProductContext = createContext<ProductContextType | null>(null);
 
 export const useLanguage = (): LanguageContextType => {
   const context = useContext(LanguageContext);
@@ -49,6 +52,16 @@ export const useLanguageMenu = (): LanguageMenuContextType => {
 
 export const useScrolled = (): ScrolledContextType => {
   const context = useContext(ScrolledContext);
+
+  if (!context) {
+    throw new Error("Please use Provider in parent component");
+  }
+
+  return context;
+};
+
+export const useProduct = (): ProductContextType => {
+  const context = useContext(ProductContext);
 
   if (!context) {
     throw new Error("Please use Provider in parent component");

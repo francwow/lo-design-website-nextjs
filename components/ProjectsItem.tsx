@@ -30,7 +30,7 @@ const ProjectsItem = ({
 
   return (
     <div ref={itemRef} className={"projects-item"}>
-      <Link href={"/proyectos"}>
+      <Link href={"/proyectos/proyectos_grid"}>
         <div
           className={
             !deskTop && itemInView

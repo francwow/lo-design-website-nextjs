@@ -1,4 +1,4 @@
-export type LanguageType = string;
+export type LanguageType = "ES" | "EN";
 
 export type MenuActiveType = boolean;
 
@@ -6,9 +6,16 @@ export type LanguageMenuType = boolean;
 
 export type ScrolledType = boolean;
 
+export type ProductType = {
+  headingES: string;
+  headingEN: string;
+  imgSrc: string | undefined;
+  alt: string | undefined;
+};
+
 export type LanguageContextType = {
   language: LanguageType;
-  setLanguage: (Language: string) => void;
+  setLanguage: (Language: LanguageType) => void;
 };
 
 export type MenuContextType = {
@@ -24,4 +31,9 @@ export type LanguageMenuContextType = {
 export type ScrolledContextType = {
   scrolled: ScrolledType;
   setScrolled: (scrolled: boolean) => void;
+};
+
+export type ProductContextType = {
+  product: ProductType | null;
+  setProduct: (product: ProductType | null) => void;
 };

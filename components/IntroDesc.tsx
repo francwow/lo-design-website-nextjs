@@ -10,6 +10,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { useInView } from "react-intersection-observer";
 import IntroDescDesktop from "./IntroDescDesktop";
 import IntroDescMobile from "./IntroDescMobile";
+import Dots from "./Dots";
 
 const images = [
   { id: 0, src: img1 },
@@ -32,11 +33,6 @@ const IntroDesc = () => {
   const { ref: containerRef, inView: containerInView } = useInView({
     threshold: 0.5,
     triggerOnce: true,
-  });
-
-  const { ref: dotsRef, inView: dotsInView } = useInView({
-    threshold: 0.2,
-    triggerOnce: false,
   });
 
   useEffect(() => {
@@ -65,18 +61,7 @@ const IntroDesc = () => {
 
   return (
     <div ref={descRef} className="intro-desc-container">
-      <div ref={dotsRef} className="dots">
-        <div className="dot one"></div>
-        <div className="dot two"></div>
-        <div className="dot three"></div>
-        <div className="dot four"></div>
-        <div className="dot five"></div>
-        <div className="dot six"></div>
-        <div className="dot seven"></div>
-        <div className="dot eight"></div>
-        {/* <div className="dot nine"></div>
-        <div className="dot ten"></div> */}
-      </div>
+      <Dots />
       <div className="slider-buttons desktop">
         <button
           onClick={() => {

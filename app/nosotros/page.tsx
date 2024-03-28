@@ -1,4 +1,4 @@
-import Placeholder from "@/components/Placeholder";
+import About from "@/components/About";
 import FooterComponent from "@/components/Footer";
 
 const AboutPage = () => {
@@ -7,7 +7,7 @@ const AboutPage = () => {
       <main className="main-wrapper">
         <div className="main-content-container">
           <section className="main-content">
-            <Placeholder bgColor="sand" />
+            <About />
           </section>
           <FooterComponent />
         </div>

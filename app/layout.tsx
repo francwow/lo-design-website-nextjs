@@ -32,7 +32,7 @@ const materialSymbols = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LO design",
+  title: "LO Design",
   description:
     "LO design S.A.S. es una pyme con única sede ubicada en Cali, conformada por un equipo de profesionales con experticia en el manejo de vidrio templado, acero inoxidable y aluminio arquitectónico.",
 };
