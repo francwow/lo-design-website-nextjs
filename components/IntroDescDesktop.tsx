@@ -79,7 +79,7 @@ const IntroDescDesktop = ({
           <CTA
             copyEN="MEET THE TEAM"
             copyES="CONOCE NUESTRO EQUIPO"
-            href="/nosotros"
+            href="/contacto"
           />
         </div>
       </div>

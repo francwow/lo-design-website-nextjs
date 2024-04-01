@@ -14,7 +14,7 @@ const CTA = ({ copyEN, copyES, href }: CTAProps) => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <Link target="_blank" href={href}>
+    <Link target="_self" href={href}>
       <div className="cta">
         {language === "EN" ? (
           <span>

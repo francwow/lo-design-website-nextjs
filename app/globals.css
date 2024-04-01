@@ -107,9 +107,85 @@ img {
   width: 50px;
   height: 50px;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 60px;
+  right: 10px;
   z-index: 999;
+}
+
+/* <ConstructionSlider /> */
+.construction-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 0;
+  overflow-x: hidden;
+  background-color: rgba(8, 8, 8, 1);
+  color: var(--color-white);
+  z-index: 999;
+}
+
+.construction-items-container {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-items {
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-items:first-child {
+  display: grid;
+  width: 100%;
+  flex-basis: 100%;
+  grid-template-columns: repeat(12, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  animation: construction-items 50s forwards infinite linear;
+}
+
+.construction-items:nth-child(2) {
+  display: grid;
+  width: 100%;
+  flex-basis: 100%;
+  grid-template-columns: repeat(12, minmax(250px, 1fr));
+  grid-template-rows: auto;
+  animation: construction-items 50s forwards infinite linear;
+}
+
+.construction-items-container:hover .construction-items:first-child,
+.construction-items-container:hover .construction-items:nth-child(2) {
+  animation-play-state: paused;
+}
+
+@keyframes construction-items {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.construction-item {
+  display: block;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0 1rem;
+}
+
+.construction-item span {
+  display: block;
+  width: 100%;
+  text-transform: capitalize;
 }
 
 /* <Placeholder /> */
@@ -899,7 +975,6 @@ img {
   position: relative;
   z-index: 99;
   max-width: 900px;
-  margin: 0 1rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -907,6 +982,8 @@ img {
   align-items: center;
   gap: 20px;
   opacity: 0;
+  padding: 1rem;
+  background-color: rgba(250, 250, 250, 0.96);
 }
 
 .reel-h1 {
@@ -917,7 +994,7 @@ img {
 }
 
 .reel-h1 h1 {
-  color: var(--color-white);
+  color: var(--color-orange);
   font-size: 2rem;
   font-family: var(--font-title);
   text-align: center;
@@ -1829,7 +1906,24 @@ h2.text-inview {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 35%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.contact-under-construction {
+  z-index: 999;
+}
+
+.contact-under-construction h1 {
+  font-family: var(--font-montserrat);
+  font-size: calc(1rem + 3vw);
+  padding: 0 1rem 2rem 1rem;
+  margin: 0;
+  font-weight: 600;
+  color: white;
+  text-align: center;
 }
 
 .contact-img {
@@ -1858,8 +1952,8 @@ h2.text-inview {
   height: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-social-container .icon-container svg {
@@ -1879,7 +1973,7 @@ h2.text-inview {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 2rem;
   color: white;
 }
@@ -1889,6 +1983,7 @@ h2.text-inview {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  font-size: calc(1rem + 0.8vw);
 }
 
 .contact-social-container .icon-container a {
@@ -2116,8 +2211,8 @@ h2.text-inview {
   .whatsapp {
     width: 60px;
     height: 60px;
-    bottom: 50px;
-    right: 50px;
+    bottom: 70px;
+    right: 30px;
   }
 
   /* <CTA /> */
@@ -2495,6 +2590,7 @@ h2.text-inview {
     padding: 15rem 3rem;
     height: 100%;
     width: 100%;
+    flex-basis: 40%;
   }
 
   .contact-info-text h1 {
@@ -2512,7 +2608,7 @@ h2.text-inview {
   }
 
   .contact-info-item span {
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.8vw);
     position: relative;
     padding: 5px 0;
   }
@@ -2536,6 +2632,9 @@ h2.text-inview {
 
   .contact-img-container {
     height: 100%;
+    flex-basis: 60%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-social-container .icon-container {
@@ -2557,6 +2656,11 @@ h2.text-inview {
     height: 100%;
     z-index: 99;
   } */
+
+  .contact-under-construction h1 {
+    padding: 1rem;
+    font-size: calc(1rem + 2.5vw);
+  }
 
   /* <ServicesPage /> */
   .services-container {

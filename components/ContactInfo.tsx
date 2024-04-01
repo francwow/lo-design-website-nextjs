@@ -1,12 +1,19 @@
+"use client";
+
+import { useLanguage } from "@/contexts/ContextHooks";
 import Icon from "./GoogleIcon";
 import Link from "next/link";
 
 const ContactInfo = () => {
+  const { language } = useLanguage();
+
   return (
     <div className="contact-info">
-      <div className="contact-info-text">
-        <h1>CONTACTO</h1>
-      </div>
+      {/* <div className="contact-info-text">
+        <h1>
+
+        </h1>
+      </div> */}
       <div className="contact-info-item">
         <Link
           href={"https://maps.app.goo.gl/5NWuXCU3R3RogfEi8"}

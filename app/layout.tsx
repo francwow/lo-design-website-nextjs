@@ -12,6 +12,7 @@ import NavOverlay from "@/components/NavOverlay";
 import Header from "@/components/Header";
 import FooterComponent from "@/components/Footer";
 import Whatsapp from "@/components/Whatsapp";
+import ConstructionSlider from "@/components/ConstructionSlider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const montserrat = Montserrat({
@@ -52,6 +53,7 @@ export default function RootLayout({
           <NavOverlay />
           <Header />
           <MainNav />
+          <ConstructionSlider />
           {children}
         </body>
       </Provider>

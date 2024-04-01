@@ -47,7 +47,7 @@ const HomeCTA = () => {
         </div>
       )}
       <CTA
-        href="https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
+        href="/contacto"
         copyEN="PROFESSIONAL CONSULTATION"
         copyES="ASESORÍA PROFESIONAL"
       />

@@ -4,6 +4,7 @@ import ContactInfo from "@/components/ContactInfo";
 import ContactSocial from "@/components/ContactSocial";
 import Icon from "@/components/GoogleIcon";
 import Social from "@/components/Social";
+import { useLanguage } from "@/contexts/ContextHooks";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,6 +14,7 @@ import { useMediaQuery } from "usehooks-ts";
 const ContactPage = () => {
   const pathname = usePathname();
   const deskTop = useMediaQuery("(min-width: 991px)");
+  const { language } = useLanguage();
 
   useEffect(() => {
     console.log(pathname);
@@ -30,6 +32,13 @@ const ContactPage = () => {
         >
           <section className="main-content">
             <div className="contact-img-container">
+              <div className="contact-under-construction">
+                <h1>
+                  {language === "ES"
+                    ? "Nuestra Página está en construcción. Contáctanos para conocer más acerca de nuestros productos y servicios."
+                    : "Our Website is under construction. Contact us to learn more about our products and services."}
+                </h1>
+              </div>
               <div className="contact-overlay"></div>
               {/* <div className="contact-fade"></div> */}
               <div className="contact-img">
