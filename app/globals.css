@@ -1593,24 +1593,25 @@ h2.text-inview {
   width: fit-content;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 
 .partner-items:first-child {
   display: grid;
   width: 100%;
   flex-basis: 100%;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   grid-template-rows: auto;
-  animation: partner-items 20s forwards infinite linear;
+  animation: partner-items 40s forwards infinite linear;
 }
 
 .partner-items:nth-child(2) {
   display: grid;
   width: 100%;
   flex-basis: 100%;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(15, 1fr);
   grid-template-rows: auto;
-  animation: partner-items 20s forwards infinite linear;
+  animation: partner-items 40s forwards infinite linear;
 }
 
 .partner-items-container:hover .partner-items:first-child,
@@ -1630,7 +1631,12 @@ h2.text-inview {
 
 .partner-item {
   width: 30vw;
+  background-color: white;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
 }
 
 .partner-item-overlay {
@@ -2011,6 +2017,13 @@ h2.text-inview {
   font-weight: 700;
   margin: 1rem 0;
   font-family: var(--font-montserrat);
+}
+
+.contact-phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 /* <ServicesPage /> */
@@ -2489,12 +2502,12 @@ h2.text-inview {
   }
 
   .partner-items:first-child {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     grid-template-rows: auto;
   }
 
   .partner-items:nth-child(2) {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     grid-template-rows: auto;
   }
 

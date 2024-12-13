@@ -20,7 +20,7 @@ const ContactInfo = () => {
           target="_blank"
         >
           <Icon icon="location_on" />
-          <span>cra 4 # 34-28, Barrio El Porvenir</span>
+          <span>calle 38 # 8a-34 El Troncal, Cali, Colombia</span>
         </Link>
       </div>
       <div className="contact-info-item">
@@ -31,9 +31,21 @@ const ContactInfo = () => {
           target="_blank"
         >
           <Icon icon="call" />
-          <span>+57 314 743 4383</span>
+          <span>+57 6024027144</span>
         </Link>
       </div>
+      <div className="contact-info-item">
+        <Link
+          href={
+            "https://api.whatsapp.com/send/?phone=573173204403&text&app_absent=0"
+          }
+          target="_blank"
+        >
+          <Icon icon="smartphone" />
+          <span> +57 314 743 4383</span>
+        </Link>
+      </div>
+
       <div className="contact-info-item">
         <Link href={"mailto:comercial1@lodesign.com.co"} target="_blank">
           <Icon icon="mail" />

@@ -13,15 +13,15 @@ const NavItems = () => {
         <li className="nav-item">Inicio</li>
       </Link>
 
-      <Link href={"/contacto"} onClick={() => setMenuActive(false)}>
+      <Link href={"/nosotros"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Conócenos</li>
       </Link>
 
-      <Link href={"/contacto"} onClick={() => setMenuActive(false)}>
+      <Link href={"/productos_servicios"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Productos y Servicios</li>
       </Link>
 
-      <Link href={"/contacto"} onClick={() => setMenuActive(false)}>
+      <Link href={"/proyectos"} onClick={() => setMenuActive(false)}>
         <li className="nav-item">Proyectos</li>
       </Link>
 
